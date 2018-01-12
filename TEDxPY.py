@@ -22,8 +22,7 @@ def window_capture(filename):
     saveDC.BitBlt((0,0),(w,h),mfcDC,(20,140),win32con.SRCCOPY)
     saveBitMap.SaveBitmapFile(saveDC,filename)
 start = time.time()
-for i in range(10):
-    window_capture('haha.jpg')
+window_capture('haha.jpg')
 text=pytesseract.image_to_string(Image.open('haha.jpg'),lang='chi_sim')
 list =''.join(text.split())
 url = 'http://www.baidu.com/s?wd=%s' % list
