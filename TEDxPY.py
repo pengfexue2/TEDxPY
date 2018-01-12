@@ -24,8 +24,8 @@ def window_capture(filename):
 start = time.time()
 window_capture('haha.jpg')
 text=pytesseract.image_to_string(Image.open('haha.jpg'),lang='chi_sim')
-list =''.join(text.split())
-url = 'http://www.baidu.com/s?wd=%s' % list
+new_text =''.join(text.split())
+url = 'http://www.baidu.com/s?wd=%s' % new_text
 webbrowser.open(url)
 end = time.time()
 print(end-start)
